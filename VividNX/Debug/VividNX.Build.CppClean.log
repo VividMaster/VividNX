@@ -2,9 +2,13 @@ c:\work\dev\nx\git\vividnx\vividnx\debug\vividnx.pch
 c:\work\dev\nx\git\vividnx\vividnx\debug\vividnx.pdb
 c:\work\dev\nx\git\vividnx\vividnx\debug\vividnx.idb
 c:\work\dev\nx\git\vividnx\vividnx\debug\stdafx.obj
+c:\work\dev\nx\git\vividnx\vividnx\debug\vec4.obj
+c:\work\dev\nx\git\vividnx\vividnx\debug\vec3.obj
+c:\work\dev\nx\git\vividnx\vividnx\debug\state.obj
+c:\work\dev\nx\git\vividnx\vividnx\debug\mat4.obj
+c:\work\dev\nx\git\vividnx\vividnx\debug\log.obj
+c:\work\dev\nx\git\vividnx\vividnx\debug\app.obj
 c:\work\dev\nx\git\vividnx\vividnx\debug\vividnx.lib
-c:\work\dev\nx\git\vividnx\vividnx\debug\test1.ilk
-c:\work\dev\nx\git\vividnx\vividnx\debug\test1.pdb
 c:\work\dev\nx\git\vividnx\vividnx\debug\vividnx.tlog\cl.command.1.tlog
 c:\work\dev\nx\git\vividnx\vividnx\debug\vividnx.tlog\cl.read.1.tlog
 c:\work\dev\nx\git\vividnx\vividnx\debug\vividnx.tlog\cl.write.1.tlog

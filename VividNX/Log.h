@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "stdaf.h"
+#include "stdafx.h"
 
 using namespace std;
 
@@ -13,19 +13,3 @@ public:
 	static void LogMsg(string msg);
 };
 
-
-
-Log::Log()
-{
-}
-
-
-Log::~Log()
-{
-}
-
-void Log::LogMsg(string msg) {
-
-	cout << "Log:" << msg << endl;
-
-}

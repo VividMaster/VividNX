@@ -32,18 +32,3 @@ private:
 	bool released = false;
 };
 
-
-
-inline State::State()
-{
-}
-
-
-inline State::~State()
-{
-	if (!released)
-	{
-		Release();
-	}
-}
-
