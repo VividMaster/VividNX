@@ -4,7 +4,7 @@
 #include "stdafx.h"
 
 
-inline void error_callback(int error, const char* description)
+ void error_callback(int error, const char* description)
 {
 	cout << description << endl;
 }
@@ -17,7 +17,7 @@ App::App()
 
 }
 
-inline App::App(int width, int height, string title, bool full) {
+ App::App(int width, int height, string title, bool full) {
 
 	AppW = width;
 	AppH = height;
@@ -28,14 +28,14 @@ inline App::App(int width, int height, string title, bool full) {
 
 }
 
-inline App::~App()
+ App::~App()
 {
 	glfwDestroyWindow(Win);
 	glfwTerminate();
 
 }
 
-inline void App::InitWindow() {
+ void App::InitWindow() {
 
 	if (!glfwInit())
 	{
@@ -72,7 +72,7 @@ inline void App::InitWindow() {
 	glfwSwapInterval(1);
 
 }
-inline void App::Run(int ups, int fps)
+ void App::Run(int ups, int fps)
 {
 
 	glClearColor(0, 0, 0, 0);
@@ -105,7 +105,7 @@ inline void App::Run(int ups, int fps)
 
 }
 
-inline void App::SetInitialState(State* state)
+ void App::SetInitialState(State* state)
 {
 
 	InitialState = state;
@@ -113,7 +113,7 @@ inline void App::SetInitialState(State* state)
 }
 
 
-inline void App::SetState(State* state)
+ void App::SetState(State* state)
 {
 
 	if (CurState != nullptr) {

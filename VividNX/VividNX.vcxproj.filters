@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\App">
+      <UniqueIdentifier>{4542feee-ae0b-455c-84a7-6ac09d50d30b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scene">
+      <UniqueIdentifier>{98e1615f-ff6f-4c68-a405-cc43d3ce2465}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -21,23 +27,23 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="State.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="App.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\App</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Header Files\App</Filter>
     </ClInclude>
     <ClInclude Include="Log.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\App</Filter>
     </ClInclude>
-    <ClInclude Include="Vec3.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="SceneGraph.h">
+      <Filter>Header Files\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Mat4.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="SceneNode.h">
+      <Filter>Header Files\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Vec4.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Node3D.h">
+      <Filter>Header Files\Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -50,16 +56,16 @@
     <ClCompile Include="State.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Mat4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Vec3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Vec4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGraph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Node3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

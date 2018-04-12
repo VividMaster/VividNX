@@ -2,12 +2,8 @@
 c:\work\dev\nx\git\vividnx\vividnx\stdafx.h(22): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   App.cpp
   Log.cpp
-  Mat4.cpp
+  SceneGraph.cpp
+  SceneNode.cpp
   State.cpp
-  Vec3.cpp
-  Vec4.cpp
   Generating Code...
-Vec3.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-State.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-Mat4.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
   VividNX.vcxproj -> C:\Work\Dev\NX\Git\VividNX\VividNX\Debug\VividNX.lib

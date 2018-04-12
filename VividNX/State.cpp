@@ -7,12 +7,12 @@
 
 
 
-inline State::State()
+ State::State()
 {
 }
 
 
-inline State::~State()
+ State::~State()
 {
 	if (!released)
 	{
