@@ -1,1 +1,4 @@
-﻿  Test1.vcxproj -> C:\Work\Dev\AppDev\VNX\VividNX\Debug\Test1.exe
+﻿  stdafx.cpp
+c:\work\dev\nx\git\vividnx\vividnx\stdafx.h(22): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  NXTest1.cpp
+c1xx : fatal error C1083: Cannot open source file: '..\..\..\VividNX\NXTest1\NXTest1\NXTest1.cpp': No such file or directory
