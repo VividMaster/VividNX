@@ -13,6 +13,16 @@ Effect::~Effect()
 {
 }
 
+void Effect::Bind() {
+
+
+}
+
+void Effect::Release() {
+
+
+}
+
 void Effect::Init() {
 
 }
@@ -123,3 +133,62 @@ void Effect::Final() {
 	CheckProgram(Program);
 
 }
+
+int Effect::GetUniLoc(string name) {
+
+	return (int)glGetUniformLocation(Program, name.c_str());
+
+
+}
+
+void Effect::SetMat(int loc, glm::mat4 v) {
+
+	glUniformMatrix4fv(loc, 16, false, glm::value_ptr(v));
+	
+}
+
+void Effect::SetInt(int loc, int v) {
+
+	glUniform1i(loc, v);
+
+}
+
+void Effect::SetFloat(int loc, float v) {
+
+	glUniform1f(loc, v);
+
+}
+
+void Effect::SetVec2(int loc, glm::vec2 v) {
+
+	glUniform2f(loc,v.x,v.y);
+
+}
+
+void Effect::SetVec3(int loc, glm::vec3 v) {
+
+	glUniform3f(loc, v.x, v.y, v.z);
+
+}
+
+void Effect::SetVec4(int loc, glm::vec4 v) {
+
+	glUniform4f(loc, v.x, v.y, v.z, v.w);
+
+}
+
+void Effect::SetTex(int loc, int id) {
+
+	glUniform1i(loc, id);
+
+}
+
+void Effect::SetBool(int loc, bool s) {
+
+	int y = 0;
+	if (s) y = 1;
+	
+	glUniform1i(loc, y);
+
+}
+

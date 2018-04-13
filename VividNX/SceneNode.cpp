@@ -109,6 +109,12 @@ void SceneNode::SetPosition(float x, float y, float z)
 
 }
 
+glm::vec3 SceneNode::GetPosition() {
+
+	return Position;
+
+}
+
 void SceneNode::SetRotate(float x, float y, float z)
 {
 

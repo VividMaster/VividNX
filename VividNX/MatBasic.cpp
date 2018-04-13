@@ -30,6 +30,28 @@ void MatBasic::Release() {
 
 }
 
+bool MatBasic::HasDiffuse() {
+
+	if (Diffuse != nullptr) return true;
+	return false;
+
+}
+
+bool MatBasic::HasNormal() {
+
+	if (Normal != nullptr) return true;
+	return false;
+
+}
+
+bool MatBasic::HasSpec() {
+
+	if (Spec != nullptr) return true;
+	return false;
+
+}
+
+
 void MatBasic::SetDiffuse(Texture2D * tex)
 {
 

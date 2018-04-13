@@ -16,6 +16,9 @@ public:
 	void SetDiffuse(Texture2D * tex);
 	void SetNormal(Texture2D * tex);
 	void SetSpec(Texture2D * tex);
+	bool HasDiffuse();
+	bool HasNormal();
+	bool HasSpec();
 private:
 	Texture2D * Diffuse;
 	Texture2D * Normal;

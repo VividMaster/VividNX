@@ -36,3 +36,15 @@ std::vector<NodeCam *> SceneGraph::GetCams() {
 	return Cams;
 
 }
+
+std::vector<NodeLight *> SceneGraph::GetLights() {
+
+	return  Lights;
+
+}
+
+void SceneGraph::AddLight(NodeLight * light) {
+
+	Lights.push_back(light);
+
+}

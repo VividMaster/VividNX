@@ -163,6 +163,7 @@
     <ClInclude Include="MeshData.h" />
     <ClInclude Include="Node3D.h" />
     <ClInclude Include="NodeCam.h" />
+    <ClInclude Include="NodeLight.h" />
     <ClInclude Include="Pen.h" />
     <ClInclude Include="RendererMultiPass.h" />
     <ClInclude Include="RendererSimple.h" />
@@ -190,6 +191,7 @@
     <ClCompile Include="MeshData.cpp" />
     <ClCompile Include="Node3D.cpp" />
     <ClCompile Include="NodeCam.cpp" />
+    <ClCompile Include="NodeLight.cpp" />
     <ClCompile Include="Pen.cpp" />
     <ClCompile Include="RendererMultiPass.cpp" />
     <ClCompile Include="RendererSimple.cpp" />

@@ -108,6 +108,9 @@
     <ClInclude Include="FXMP.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="NodeLight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -180,6 +183,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FXMP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeLight.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
