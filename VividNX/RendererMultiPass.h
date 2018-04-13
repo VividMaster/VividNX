@@ -12,11 +12,11 @@ class RendererMultiPass :
 public:
 	RendererMultiPass();
 	~RendererMultiPass();
-	void Sync() override;
-	void Bind() override;
-	void Release() override;
-	void BindNode(SceneNode * node) override;
-	void RenderNode(SceneNode * node) override;
-	void ReleaseNode(SceneNode * node) override;
+	void Sync() ;
+	void Bind() ;
+	void Release() ;
+	void BindNode(SceneNode * node) ;
+	void RenderNode(SceneNode * node) ;
+	void ReleaseNode(SceneNode * node) ;
 };
 

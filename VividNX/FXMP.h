@@ -11,6 +11,6 @@ class FXMP :
 public:
 	FXMP();
 	~FXMP();
-	void Init() override;
+	void Init() ;
 };
 

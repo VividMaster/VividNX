@@ -7,7 +7,7 @@ class NodeCam : public SceneNode
 public:
 	NodeCam();
 	~NodeCam();
-	glm::mat4 GetWorldMat() override;
+	glm::mat4 GetWorldMat() ;
 	int GetX();
 	int GetY();
 	int GetW();

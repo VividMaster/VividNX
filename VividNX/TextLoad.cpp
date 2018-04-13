@@ -18,7 +18,6 @@ TextLoad::TextLoad(string path) {
 	buffer << t.rdbuf();
 	Text = buffer.str();
 
-	cout << Text << endl;
 	
 	
 }

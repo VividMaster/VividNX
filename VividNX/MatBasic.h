@@ -10,9 +10,9 @@ class MatBasic : public MaterialBase
 public:
 	MatBasic();
 	~MatBasic();
-	void Init() override;
-	void Bind() override;
-	void Release() override;
+	void Init() ;
+	void Bind() ;
+	void Release() ;
 	void SetDiffuse(Texture2D * tex);
 	void SetNormal(Texture2D * tex);
 	void SetSpec(Texture2D * tex);

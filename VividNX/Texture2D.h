@@ -10,7 +10,7 @@ public:
 	Texture2D();
 	~Texture2D();
 	Texture2D(string path);
-	void Bind(int unit) override;
-	void Release(int unit) override;
+	void Bind(int unit) ;
+	void Release(int unit) ;
 };
 

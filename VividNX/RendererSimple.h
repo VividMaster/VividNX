@@ -10,9 +10,9 @@ class RendererSimple : public SceneRenderer
 public:
 	RendererSimple();
 	~RendererSimple();
-	void Sync() override;
-	void RenderNode(SceneNode * node) override;
-	void BindNode(SceneNode * node) override;
-	void ReleaseNode(SceneNode * node) override;
+	void Sync() ;
+	void RenderNode(SceneNode * node) ;
+	void BindNode(SceneNode * node) ;
+	void ReleaseNode(SceneNode * node) ;
 };
 
