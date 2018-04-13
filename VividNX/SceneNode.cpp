@@ -117,3 +117,25 @@ void SceneNode::SetRotate(float x, float y, float z)
 
 
 }
+
+void SceneNode::Move(float x, float y, float z) {
+
+	glm::vec3 v = glm::vec3(x, y, z);
+
+	glm::mat4 mr = glm::translate(Rotation, v);
+	
+	glm::mat4 rm;
+	glm::vec3 rs;
+	glm::quat rr;
+	glm::vec3 trans;
+	glm::vec3 skew;
+	glm::vec4 perp;
+
+	glm::decompose(mr, rs, rr, trans, skew, perp);
+	cout << "VX:" << trans.x << " VY:" << trans.y << " Z:" << trans.z << endl;
+	Position.x = Position.x + trans.x;
+	Position.y = Position.y + trans.y;
+	Position.z = Position.z + trans.z;
+
+
+}

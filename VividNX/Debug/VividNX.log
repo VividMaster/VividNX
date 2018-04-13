@@ -1,6 +1,17 @@
-﻿  SceneNode.cpp
-c:\work\dev\nx\git\vividnx\vividnx\scenenode.cpp(49): warning C4018: '<': signed/unsigned mismatch
+﻿  Import.cpp
+c:\work\dev\nx\git\vividnx\vividnx\import.cpp(38): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\import.cpp(48): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\import.cpp(84): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\import.cpp(122): warning C4018: '<': signed/unsigned mismatch
 assimp-vc140-mt.lib(assimp-vc140-mt.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 assimp-vc140-mt.lib(assimp-vc140-mt.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+DevIL.lib(DevIL.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+DevIL.lib(DevIL.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+ILU.lib(ILU.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+ILU.lib(ILU.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+ILUT.lib(ILUT.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+ILUT.lib(ILUT.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+glew.lib(glew.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+glew.lib(glew.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
 Import.obj : warning LNK4006: "public: struct aiScene const * __thiscall Assimp::Importer::ReadFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,unsigned int)" (?ReadFile@Importer@Assimp@@QAEPBUaiScene@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@I@Z) already defined in assimp-vc140-mt.lib(assimp-vc140-mt.dll); second definition ignored
   VividNX.vcxproj -> C:\Work\Dev\NX\Git\VividNX\VividNX\Debug\VividNX.lib

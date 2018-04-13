@@ -20,7 +20,7 @@ public:
 	void SetPosition(glm::vec3 pos);
 	void SetPosition(float x, float y, float z);
 	void SetRotate(float x, float y, float z);
-
+	void Move(float x, float y, float z);
 
 private:
 	std::vector<SceneNode *> Nodes;

@@ -74,6 +74,14 @@ void RenderMesh(MeshData * mesh, Node3D * node, NodeCam * cam) {
 
 	glLoadMatrixf(glm::value_ptr(pm));
 
+	MaterialBase * mat = mesh->GetMaterial();
+
+	if (mat != nullptr) {
+
+		mat->Bind();
+
+	}
+
 	glBegin(GL_TRIANGLES);
 
 	for (int t = 0; t < tris.size(); t++) {
@@ -91,6 +99,12 @@ void RenderMesh(MeshData * mesh, Node3D * node, NodeCam * cam) {
 	glEnd();
 
 	
+	if (mat != nullptr) {
+
+		mat->Release();
+
+	}
+
 }
 
 void RenderVert(Vertex  v) {

@@ -33,3 +33,15 @@ vector<Triangle *> MeshData::GetTris() {
 MeshData::~MeshData()
 {
 }
+
+void MeshData::SetMaterial(MaterialBase * mat) {
+
+	this->Material = mat;
+
+}
+
+MaterialBase * MeshData::GetMaterial() {
+
+	return Material;
+
+}

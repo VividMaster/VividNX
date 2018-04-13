@@ -90,13 +90,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Work\libs\assimp-master\include;C:\Work\Dev\NX\Git\VividNX\VividNX;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Work\libs\devil\include;C:\Work\libs\assimp-master\include;C:\Work\Dev\NX\Git\VividNX\VividNX;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;VividNX.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Work\Dev\NX\Git\VividNX\VividNX\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;VividNX.lib;DevIL.lib;ILU.lib;ILUT.lib;glew.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Work\Dev\NX\Git\VividNX\VividNX\packages\glew.1.9.0.1\build\native\lib\v110\Win32\Release\dynamic;C:\Work\libs\devil;C:\Work\Dev\NX\Git\VividNX\VividNX\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -174,6 +174,8 @@
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\..\VividNX\packages\glfw.3.2.1.5\build\native\glfw.targets" Condition="Exists('..\..\VividNX\packages\glfw.3.2.1.5\build\native\glfw.targets')" />
     <Import Project="..\..\VividNX\packages\glm.0.9.8.5\build\native\glm.targets" Condition="Exists('..\..\VividNX\packages\glm.0.9.8.5\build\native\glm.targets')" />
+    <Import Project="..\..\VividNX\packages\glew.redist.1.9.0.1\build\native\glew.redist.targets" Condition="Exists('..\..\VividNX\packages\glew.redist.1.9.0.1\build\native\glew.redist.targets')" />
+    <Import Project="..\..\VividNX\packages\glew.1.9.0.1\build\native\glew.targets" Condition="Exists('..\..\VividNX\packages\glew.1.9.0.1\build\native\glew.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -181,5 +183,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\..\VividNX\packages\glfw.3.2.1.5\build\native\glfw.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\VividNX\packages\glfw.3.2.1.5\build\native\glfw.targets'))" />
     <Error Condition="!Exists('..\..\VividNX\packages\glm.0.9.8.5\build\native\glm.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\VividNX\packages\glm.0.9.8.5\build\native\glm.targets'))" />
+    <Error Condition="!Exists('..\..\VividNX\packages\glew.redist.1.9.0.1\build\native\glew.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\VividNX\packages\glew.redist.1.9.0.1\build\native\glew.redist.targets'))" />
+    <Error Condition="!Exists('..\..\VividNX\packages\glew.1.9.0.1\build\native\glew.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\VividNX\packages\glew.1.9.0.1\build\native\glew.targets'))" />
   </Target>
 </Project>

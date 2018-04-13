@@ -6,6 +6,9 @@
 
 using namespace std;
 class State;
+
+enum KeyID{W=GLFW_KEY_W,A=GLFW_KEY_A,S=GLFW_KEY_S,D=GLFW_KEY_D};
+
 class App
 {
 public:

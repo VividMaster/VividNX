@@ -71,7 +71,7 @@ Node3D * Import::ImportAssImp(string path) {
 				aiVector3D u = msh->mTextureCoords[0][k];
 
 				nv.U = u.x;
-				nv.V = u.y;
+				nv.V = 1.0f-u.y;
 				nv.W = u.z;
 
 

@@ -31,6 +31,19 @@ App::App()
 
 	InitWindow();
 
+	GLenum err = glewInit();
+
+	if (GLEW_OK != err) {
+
+		cout << "failed to initialize opengl-exstentions." << endl;
+		while (true) {
+
+		}
+
+	}
+
+	ilInit();
+
 }
 
  App::~App()
@@ -76,15 +89,37 @@ App::App()
 	glfwMakeContextCurrent(Win);
 	glfwSwapInterval(1);
 
-	glDisable(GL_CULL_FACE);
+	glfwSetInputMode(Win, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+
+	glEnable(GL_CULL_FACE);
 	glDisable(GL_BLEND);
+	glEnable(GL_DEPTH_TEST);
 	glDisable(GL_ALPHA_TEST);
-	glDisable(GL_CULL_FACE);
+	//glDisable(GL_CULL_FACE);
 	glDisable(GL_LIGHTING);
 	glDisable(GL_SCISSOR_TEST);
 	glViewport(0, 0, AppW, AppH);
-
+	glCullFace(GL_BACK);
+	glClearDepth(1.0f);
+	glDepthFunc(GL_LESS);
 }
+
+ void key_callback(GLFWwindow * win, int key, int scan, int act, int mods) {
+
+	
+
+	 if (act == GLFW_PRESS) {
+		 if (key < 0 || key>255) return;
+		 Global::Key[key] = true;
+	 }
+	 else if (act == GLFW_RELEASE) {
+		 if (key < 0 || key>255) return;
+		 Global::Key[key] = false;
+	 }
+
+ }
+
  void App::Run(int ups, int fps)
 {
 
@@ -93,12 +128,32 @@ App::App()
 	if (InitialState != nullptr) {
 		SetState(InitialState);
 	}
+	double ax, ay;
+	glfwGetCursorPos(Win, &ax, &ay);
+	Global::MX = ax;
+	Global::MY = ay;
+	glfwSetKeyCallback(Win, key_callback);
+
 
 	while (!glfwWindowShouldClose(Win)) {
 
 		glfwMakeContextCurrent(Win);
 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		double cx = 0, cy = 0;
+
+		glfwGetCursorPos(Win, &cx, &cy);
+
+
+		Global::MXD = (float)cx - Global::MX;
+		Global::MYD = (float)cy - Global::MY;
+		Global::MX = (float)cx;
+		Global::MY = (float)cy;
+
+	
+
+		//cout << "CX:" << cx << " CY:" << cy << endl;
 
 		if (CurState != nullptr) {
 

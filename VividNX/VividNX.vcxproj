@@ -90,15 +90,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Work\libs\assimp-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Work\libs\devil\include;C:\Work\libs\assimp-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>opengl32.lib;assimp-vc140-mt.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Work\libs\assimp-master\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;assimp-vc140-mt.lib;DevIL.lib;ILU.lib;ILUT.lib;glew.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Work\Dev\NX\Git\VividNX\VividNX\packages\glew.1.9.0.1\build\native\lib\v110\Win32\Release\dynamic;C:\Work\libs\devil;C:\Work\libs\assimp-master\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -156,6 +156,8 @@
     <ClInclude Include="Global.h" />
     <ClInclude Include="Import.h" />
     <ClInclude Include="Log.h" />
+    <ClInclude Include="MatBasic.h" />
+    <ClInclude Include="MaterialBase.h" />
     <ClInclude Include="MeshData.h" />
     <ClInclude Include="Node3D.h" />
     <ClInclude Include="NodeCam.h" />
@@ -167,6 +169,8 @@
     <ClInclude Include="State.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Texture2D.h" />
+    <ClInclude Include="TextureBase.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vertex.h" />
   </ItemGroup>
@@ -175,6 +179,8 @@
     <ClCompile Include="Global.cpp" />
     <ClCompile Include="Import.cpp" />
     <ClCompile Include="Log.cpp" />
+    <ClCompile Include="MatBasic.cpp" />
+    <ClCompile Include="MaterialBase.cpp" />
     <ClCompile Include="MeshData.cpp" />
     <ClCompile Include="Node3D.cpp" />
     <ClCompile Include="NodeCam.cpp" />
@@ -190,6 +196,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Texture2D.cpp" />
+    <ClCompile Include="TextureBase.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vertex.cpp" />
   </ItemGroup>
@@ -200,6 +208,8 @@
   <ImportGroup Label="ExtensionTargets">
     <Import Project="packages\glfw.3.2.1.5\build\native\glfw.targets" Condition="Exists('packages\glfw.3.2.1.5\build\native\glfw.targets')" />
     <Import Project="packages\glm.0.9.8.5\build\native\glm.targets" Condition="Exists('packages\glm.0.9.8.5\build\native\glm.targets')" />
+    <Import Project="packages\glew.redist.1.9.0.1\build\native\glew.redist.targets" Condition="Exists('packages\glew.redist.1.9.0.1\build\native\glew.redist.targets')" />
+    <Import Project="packages\glew.1.9.0.1\build\native\glew.targets" Condition="Exists('packages\glew.1.9.0.1\build\native\glew.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -207,5 +217,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('packages\glfw.3.2.1.5\build\native\glfw.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glfw.3.2.1.5\build\native\glfw.targets'))" />
     <Error Condition="!Exists('packages\glm.0.9.8.5\build\native\glm.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glm.0.9.8.5\build\native\glm.targets'))" />
+    <Error Condition="!Exists('packages\glew.redist.1.9.0.1\build\native\glew.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glew.redist.1.9.0.1\build\native\glew.redist.targets'))" />
+    <Error Condition="!Exists('packages\glew.1.9.0.1\build\native\glew.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glew.1.9.0.1\build\native\glew.targets'))" />
   </Target>
 </Project>
