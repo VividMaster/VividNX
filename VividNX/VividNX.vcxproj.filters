@@ -25,6 +25,9 @@
     <Filter Include="Header Files\MeshData">
       <UniqueIdentifier>{fec0e431-e1b8-4c63-a909-ac8d2a998dfb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Render">
+      <UniqueIdentifier>{4a96c1f6-ec1d-49dd-ad97-a83a22b067d4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -51,9 +54,6 @@
     <ClInclude Include="Node3D.h">
       <Filter>Header Files\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="NodeCam.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MeshData.h">
       <Filter>Header Files\MeshData</Filter>
     </ClInclude>
@@ -65,6 +65,21 @@
     </ClInclude>
     <ClInclude Include="Import.h">
       <Filter>Header Files\Import</Filter>
+    </ClInclude>
+    <ClInclude Include="Pen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneRenderer.h">
+      <Filter>Header Files\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="RendererSimple.h">
+      <Filter>Header Files\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeCam.h">
+      <Filter>Header Files\Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +117,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RendererSimple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

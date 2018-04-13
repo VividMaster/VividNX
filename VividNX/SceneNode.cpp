@@ -39,19 +39,23 @@ SceneNode* SceneNode::GetRoot() {
 
 void SceneNode::SetRoot(SceneNode * node) {
 
-	if (Root != nullptr) {
-
-		Root->Remove(this);
-
-	}
 	Root = node;
-	node->Add(this);
+
 }
 
 void SceneNode::Remove(SceneNode * node)
 {
 
-	Nodes.remove(node);
+	for (int i = 0; i < Nodes.size(); i++) {
+
+		if (Nodes[i] == node) {
+
+			Nodes.erase(Nodes.begin() + i);
+			return;
+
+		}
+
+	}
 
 }
 
@@ -59,16 +63,10 @@ void SceneNode::Add(SceneNode * node)
 {
 
 	
-	
-	if (node->GetRoot() != nullptr) {
 
-		SceneNode * tn = node->GetRoot();
-		tn->Remove(node);
-
-	}
-	
 	node->SetRoot(this);
-
+	Nodes.push_back(node);
+	
 
 }
 
@@ -87,5 +85,32 @@ glm::mat4 SceneNode::GetWorldMat() {
 	glm::mat4 nm = glm::translate(r, Position);
 
 	return nm;
+
+}
+
+vector<SceneNode *> SceneNode::GetNodes() {
+
+	return Nodes;
+
+}
+
+void SceneNode::SetPosition(glm::vec3 pos) {
+
+	Position = pos;
+
+}
+
+void SceneNode::SetPosition(float x, float y, float z)
+{
+
+	Position = glm::vec3(x, y, z);
+
+}
+
+void SceneNode::SetRotate(float x, float y, float z)
+{
+
+	//glm::rot
+
 
 }

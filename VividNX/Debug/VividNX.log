@@ -1,21 +1,35 @@
 ﻿  stdafx.cpp
 c:\work\dev\nx\git\vividnx\vividnx\stdafx.h(22): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   App.cpp
+  Global.cpp
   Import.cpp
-c:\work\dev\nx\git\vividnx\vividnx\import.cpp(26): warning C4018: '<': signed/unsigned mismatch
-c:\work\dev\nx\git\vividnx\vividnx\import.cpp(36): warning C4018: '<': signed/unsigned mismatch
-c:\work\dev\nx\git\vividnx\vividnx\import.cpp(72): warning C4018: '<': signed/unsigned mismatch
-c:\work\dev\nx\git\vividnx\vividnx\import.cpp(108): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\import.cpp(38): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\import.cpp(48): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\import.cpp(84): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\import.cpp(123): warning C4018: '<': signed/unsigned mismatch
   Log.cpp
   MeshData.cpp
   Node3D.cpp
   NodeCam.cpp
+  Pen.cpp
+c:\work\dev\nx\git\vividnx\vividnx\pen.cpp(21): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\work\dev\nx\git\vividnx\vividnx\pen.cpp(23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\work\dev\nx\git\vividnx\vividnx\pen.cpp(25): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\work\dev\nx\git\vividnx\vividnx\pen.cpp(27): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  RendererSimple.cpp
+c:\work\dev\nx\git\vividnx\vividnx\renderersimple.cpp(29): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\renderersimple.cpp(35): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\renderersimple.cpp(48): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\renderersimple.cpp(79): warning C4018: '<': signed/unsigned mismatch
   SceneGraph.cpp
   SceneNode.cpp
+c:\work\dev\nx\git\vividnx\vividnx\scenenode.cpp(49): warning C4018: '<': signed/unsigned mismatch
+  SceneRenderer.cpp
   State.cpp
   Triangle.cpp
   Vertex.cpp
   Generating Code...
 assimp-vc140-mt.lib(assimp-vc140-mt.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 assimp-vc140-mt.lib(assimp-vc140-mt.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+Import.obj : warning LNK4006: "public: struct aiScene const * __thiscall Assimp::Importer::ReadFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,unsigned int)" (?ReadFile@Importer@Assimp@@QAEPBUaiScene@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@I@Z) already defined in assimp-vc140-mt.lib(assimp-vc140-mt.dll); second definition ignored
   VividNX.vcxproj -> C:\Work\Dev\NX\Git\VividNX\VividNX\Debug\VividNX.lib

@@ -15,7 +15,19 @@ Node3D * Import::ImportAssImp(string path) {
 
 	Node3D * root = new Node3D();
 
-	const struct aiScene	* ai = aiImportFile(path.c_str(), aiProcessPreset_TargetRealtime_MaxQuality);
+	Assimp::Importer imp;
+
+	const aiScene* ai =imp.ReadFile(path, aiProcessPreset_TargetRealtime_MaxQuality | aiProcess_CalcTangentSpace | aiProcess_GenSmoothNormals | aiProcess_OptimizeGraph | aiProcess_OptimizeMeshes | aiProcess_Triangulate);
+	if (!ai) {
+
+		cout << "could not load model:" << path << endl;
+		while (true) {
+
+		}
+
+	}
+
+	//const struct aiScene	* ai = aiImportFile(path.c_str(), aiProcessPreset_TargetRealtime_MaxQuality);
 
 	struct aiNode * ar = ai->mRootNode;
 
@@ -98,6 +110,9 @@ void Import::ParseNode(struct aiNode * an, Node3D * vn,std::vector<MeshData *> m
 {
 
 	int mc = an->mNumMeshes;
+	vn->SetName(an->mName.C_Str());
+	cout << "Node:" << an->mName.C_Str() << " Has " << an->mNumChildren << " Children " << endl;
+	cout << "Meshes:" << an->mNumMeshes << endl;
 	for (int i = 0; i < mc; i++) {
 
 		MeshData * md = meshes[(int)an->mMeshes[i]];

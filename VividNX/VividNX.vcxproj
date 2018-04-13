@@ -153,13 +153,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="App.h" />
+    <ClInclude Include="Global.h" />
     <ClInclude Include="Import.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="MeshData.h" />
     <ClInclude Include="Node3D.h" />
     <ClInclude Include="NodeCam.h" />
+    <ClInclude Include="Pen.h" />
+    <ClInclude Include="RendererSimple.h" />
     <ClInclude Include="SceneGraph.h" />
     <ClInclude Include="SceneNode.h" />
+    <ClInclude Include="SceneRenderer.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -168,13 +172,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="Global.cpp" />
     <ClCompile Include="Import.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="MeshData.cpp" />
     <ClCompile Include="Node3D.cpp" />
     <ClCompile Include="NodeCam.cpp" />
+    <ClCompile Include="Pen.cpp" />
+    <ClCompile Include="RendererSimple.cpp" />
     <ClCompile Include="SceneGraph.cpp" />
     <ClCompile Include="SceneNode.cpp" />
+    <ClCompile Include="SceneRenderer.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

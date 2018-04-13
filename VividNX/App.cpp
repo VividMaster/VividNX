@@ -24,6 +24,11 @@ App::App()
 	AppTitle = title;
 	Fullscreen = full;
 
+	Global::W = width;
+	Global::H = height;
+	Global::Full = full;
+	Global::Title = title;
+
 	InitWindow();
 
 }
@@ -47,8 +52,8 @@ App::App()
 
 	glfwSetErrorCallback(error_callback);
 
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 
 	if (Fullscreen) {
 		Win = glfwCreateWindow(AppW, AppH, AppTitle.c_str(), glfwGetPrimaryMonitor(), nullptr);
@@ -71,6 +76,14 @@ App::App()
 	glfwMakeContextCurrent(Win);
 	glfwSwapInterval(1);
 
+	glDisable(GL_CULL_FACE);
+	glDisable(GL_BLEND);
+	glDisable(GL_ALPHA_TEST);
+	glDisable(GL_CULL_FACE);
+	glDisable(GL_LIGHTING);
+	glDisable(GL_SCISSOR_TEST);
+	glViewport(0, 0, AppW, AppH);
+
 }
  void App::Run(int ups, int fps)
 {
@@ -82,6 +95,8 @@ App::App()
 	}
 
 	while (!glfwWindowShouldClose(Win)) {
+
+		glfwMakeContextCurrent(Win);
 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -122,6 +137,6 @@ App::App()
 
 	}
 	CurState = state;
-
+	CurState->Init();
 
 }

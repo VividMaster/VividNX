@@ -12,6 +12,8 @@ public:
 	void SetTri(Triangle * tri, int index);
 	~MeshData();
 	Triangle * GetTri(int index);
+	vector<Triangle *> GetTris();
+
 private:
 
 	std::vector<Triangle *> Tris;

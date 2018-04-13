@@ -24,6 +24,12 @@ Triangle * MeshData::GetTri(int index) {
 
 }
 
+vector<Triangle *> MeshData::GetTris() {
+
+	return Tris;
+
+}
+
 MeshData::~MeshData()
 {
 }

@@ -16,9 +16,14 @@ public:
 	void SetName(string name);
 	string GetName();
 	virtual glm::mat4 GetWorldMat();
+	std::vector<SceneNode *> GetNodes();
+	void SetPosition(glm::vec3 pos);
+	void SetPosition(float x, float y, float z);
+	void SetRotate(float x, float y, float z);
+
 
 private:
-	std::list<SceneNode *> Nodes;
+	std::vector<SceneNode *> Nodes;
 	SceneNode * Root = nullptr;
 	string Name;
 	glm::mat4 Rotation;

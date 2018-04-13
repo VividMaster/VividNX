@@ -19,6 +19,7 @@ public:
 	void Run(int ups, int fps);
 	void SetInitialState(State* state);
 	void SetState(State * state);
+
 private:
 	void InitWindow();
 	GLFWwindow * Win=nullptr;
