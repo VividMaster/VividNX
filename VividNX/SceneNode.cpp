@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "SceneNode.h"
 
-
+#define degreesToRadians(x) x*(3.141592f/180.0f)
 SceneNode::SceneNode()
 {
 
@@ -84,6 +84,8 @@ glm::mat4 SceneNode::GetWorldMat() {
 
 	glm::mat4 nm = glm::translate(r, Position);
 
+	nm = nm * Rotation;
+
 	return nm;
 
 }
@@ -110,6 +112,7 @@ void SceneNode::SetPosition(float x, float y, float z)
 void SceneNode::SetRotate(float x, float y, float z)
 {
 
+	Rotation = glm::eulerAngleYXZ(degreesToRadians(y), degreesToRadians(x), degreesToRadians(z));
 	//glm::rot
 
 

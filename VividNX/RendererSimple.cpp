@@ -64,7 +64,7 @@ void RenderMesh(MeshData * mesh, Node3D * node, NodeCam * cam) {
 
 	glm::mat4 mm = node->GetWorldMat();
 
-	mm = mm * mvp;
+	mm = mvp * mm;
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadMatrixf(glm::value_ptr(mm));

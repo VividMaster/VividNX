@@ -111,8 +111,7 @@ void Import::ParseNode(struct aiNode * an, Node3D * vn,std::vector<MeshData *> m
 
 	int mc = an->mNumMeshes;
 	vn->SetName(an->mName.C_Str());
-	cout << "Node:" << an->mName.C_Str() << " Has " << an->mNumChildren << " Children " << endl;
-	cout << "Meshes:" << an->mNumMeshes << endl;
+	
 	for (int i = 0; i < mc; i++) {
 
 		MeshData * md = meshes[(int)an->mMeshes[i]];
