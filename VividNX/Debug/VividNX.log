@@ -1,10 +1,21 @@
 ﻿  stdafx.cpp
 c:\work\dev\nx\git\vividnx\vividnx\stdafx.h(22): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   App.cpp
+  Import.cpp
+c:\work\dev\nx\git\vividnx\vividnx\import.cpp(26): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\import.cpp(36): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\import.cpp(72): warning C4018: '<': signed/unsigned mismatch
+c:\work\dev\nx\git\vividnx\vividnx\import.cpp(108): warning C4018: '<': signed/unsigned mismatch
   Log.cpp
+  MeshData.cpp
   Node3D.cpp
+  NodeCam.cpp
   SceneGraph.cpp
   SceneNode.cpp
-c:\work\dev\nx\git\vividnx\vividnx\scenenode.cpp(17): error C2059: syntax error: '}'
   State.cpp
+  Triangle.cpp
+  Vertex.cpp
   Generating Code...
+assimp-vc140-mt.lib(assimp-vc140-mt.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+assimp-vc140-mt.lib(assimp-vc140-mt.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+  VividNX.vcxproj -> C:\Work\Dev\NX\Git\VividNX\VividNX\Debug\VividNX.lib

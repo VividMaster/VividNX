@@ -8,6 +8,7 @@ SceneNode::SceneNode()
 	Rotation = glm::mat4(1);
 	Position = glm::vec3();
 	Scale = glm::vec3();
+	Name = "";
 
 }
 
@@ -15,6 +16,18 @@ SceneNode::SceneNode()
 SceneNode::~SceneNode()
 {
 
+
+}
+
+void SceneNode::SetName(string name) {
+
+	Name = name;
+
+}
+
+string SceneNode::GetName() {
+
+	return Name;
 
 }
 
@@ -45,7 +58,7 @@ void SceneNode::Remove(SceneNode * node)
 void SceneNode::Add(SceneNode * node)
 {
 
-	Nodes.push_back(node);
+	
 	
 	if (node->GetRoot() != nullptr) {
 
@@ -59,7 +72,7 @@ void SceneNode::Add(SceneNode * node)
 
 }
 
-glm::mat4 SceneNode::GetWorldMat() override {
+glm::mat4 SceneNode::GetWorldMat() {
 
 	glm::mat4 r = glm::mat4();
 

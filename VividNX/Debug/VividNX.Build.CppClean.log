@@ -2,10 +2,16 @@ c:\work\dev\nx\git\vividnx\vividnx\debug\vividnx.pch
 c:\work\dev\nx\git\vividnx\vividnx\debug\vividnx.pdb
 c:\work\dev\nx\git\vividnx\vividnx\debug\vividnx.idb
 c:\work\dev\nx\git\vividnx\vividnx\debug\stdafx.obj
+c:\work\dev\nx\git\vividnx\vividnx\debug\vertex.obj
+c:\work\dev\nx\git\vividnx\vividnx\debug\triangle.obj
 c:\work\dev\nx\git\vividnx\vividnx\debug\state.obj
 c:\work\dev\nx\git\vividnx\vividnx\debug\scenenode.obj
 c:\work\dev\nx\git\vividnx\vividnx\debug\scenegraph.obj
+c:\work\dev\nx\git\vividnx\vividnx\debug\nodecam.obj
+c:\work\dev\nx\git\vividnx\vividnx\debug\node3d.obj
+c:\work\dev\nx\git\vividnx\vividnx\debug\meshdata.obj
 c:\work\dev\nx\git\vividnx\vividnx\debug\log.obj
+c:\work\dev\nx\git\vividnx\vividnx\debug\import.obj
 c:\work\dev\nx\git\vividnx\vividnx\debug\app.obj
 c:\work\dev\nx\git\vividnx\vividnx\debug\vividnx.lib
 c:\work\dev\nx\git\vividnx\vividnx\debug\nxexam1.ilk
