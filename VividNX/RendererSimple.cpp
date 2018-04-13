@@ -53,6 +53,16 @@ void RendererSimple::RenderNode(SceneNode * node) {
 	
 }
 
+void RendererSimple::BindNode(SceneNode * node) {
+
+
+}
+
+void RendererSimple::ReleaseNode(SceneNode * node) {
+
+}
+
+
 void RenderVert(Vertex  v);
 
 void RenderMesh(MeshData * mesh, Node3D * node, NodeCam * cam) {

@@ -38,13 +38,15 @@ Node3D * Import::ImportAssImp(string path) {
 	for (int i = 0; i < ai->mNumMeshes; i++) {
 
 		aiMesh * msh = ai->mMeshes[i];
-		MeshData * dat = new MeshData(msh->mNumFaces);
+		MeshData * dat = new MeshData(msh->mNumFaces*3,msh->mNumVertices);
 		meshes[i] = dat;
 
 		std::vector<Vertex> verts;
 
 		verts.resize(msh->mNumVertices);
 
+		float * va = new float[msh->mNumVertices * 3 * 3 * 3 * 3 * 3];
+		int vc = 0;
 		for (int k = 0; k < msh->mNumVertices; k++)
 		{
 			aiVector3D v = msh->mVertices[k];
@@ -53,7 +55,9 @@ Node3D * Import::ImportAssImp(string path) {
 			nv.X = v.x;
 			nv.Y = v.y;
 			nv.Z = v.z;
-
+			va[vc++] = nv.X;
+			va[vc++] = nv.Y;
+			va[vc++] = nv.Z;
 
 			if (msh->HasNormals()) {
 			
@@ -62,6 +66,16 @@ Node3D * Import::ImportAssImp(string path) {
 				nv.NX = n.x;
 				nv.NY = n.y;
 				nv.NZ = n.z;
+				va[vc++] = n.x;
+				va[vc++] = n.y;
+				va[vc++] = n.z;
+
+			}
+			else {
+
+				va[vc++] = 0;
+				va[vc++] = 0;
+				va[vc++] = 0;
 
 			}
 
@@ -73,29 +87,62 @@ Node3D * Import::ImportAssImp(string path) {
 				nv.U = u.x;
 				nv.V = 1.0f-u.y;
 				nv.W = u.z;
+				va[vc++] = u.x;
+				va[vc++] = u.y;
+				va[vc++] = u.z;
+ 
+			}
+			else {
 
+				va[vc++] = 0;
+				va[vc++] = 0;
+				va[vc++] = 0;
+
+			}
+
+			if (msh->HasTangentsAndBitangents()) {
+
+				aiVector3D t = msh->mTangents[k];
+
+				va[vc++] = t.x;
+				va[vc++] = t.y;
+				va[vc++] = t.z;
+
+				aiVector3D b = msh->mBitangents[k];
+
+				va[vc++] = b.x;
+				va[vc++] = b.y;
+				va[vc++] = b.z;
+
+			}
+			else {
+
+				va[vc++] = 0; va[vc++] = 0; va[vc++] = 0;
+				va[vc++] = 0; va[vc++] = 0; va[vc++] = 0;
 
 			}
 
 			verts[k] = nv;
 
 		}
-
+		dat->SetVertices(va);
+		int * in = new int[msh->mNumFaces * 3];
+		int ic = 0;
 		for (int i = 0; i < msh->mNumFaces; i++) {
 
+			
 
-
-			Triangle * tri = new Triangle();
-
+			
 			aiFace f = msh->mFaces[i];
 
-			tri->V0 = verts[(int)f.mIndices[0]];
-			tri->V1 = verts[(int)f.mIndices[1]];
-			tri->V2 = verts[(int)f.mIndices[2]];
-				
-			dat->SetTri(tri, i);
+			in[ic++] = f.mIndices[0];
+			in[ic++] = f.mIndices[1];
+			in[ic++] = f.mIndices[2];
+
+		
 
 		}
+		dat->SetIndices(in);
 
 	}
 

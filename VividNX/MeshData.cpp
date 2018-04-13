@@ -4,11 +4,54 @@
 
 MeshData::MeshData()
 {
+
+
 }
 
-MeshData::MeshData(int tris) {
+MeshData::MeshData(int indices,int verts) {
 
-	Tris.resize(tris);
+	//Tris.resize(tris);
+
+	//Vertices = new float[verts * 3 * 3 * 3 * 3 * 3];
+	NumIndices = indices;
+
+	NumVertices = verts;
+
+}
+
+int MeshData::GetVertexCount() {
+
+	return NumVertices;
+
+}
+
+int MeshData::GetIndexCount() {
+
+	return NumIndices;
+
+}
+
+void MeshData::SetVertices(float * vertices) {
+
+	this->Vertices = vertices;
+
+}
+
+void MeshData::SetIndices(int * indices) {
+
+	Indices = indices;
+
+}
+
+float * MeshData::GetVertices() {
+
+	return Vertices;
+
+}
+
+int * MeshData::GetIndices() {
+
+	return Indices;
 
 }
 
@@ -43,5 +86,18 @@ void MeshData::SetMaterial(MaterialBase * mat) {
 MaterialBase * MeshData::GetMaterial() {
 
 	return Material;
+
+}
+
+void MeshData::SetGL(int index, GLuint id) {
+
+	GL[index] = id;
+	GLC++;
+
+}
+
+GLuint MeshData::GetGL(int index) {
+
+	return GL[index];
 
 }

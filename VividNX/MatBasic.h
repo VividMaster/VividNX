@@ -21,5 +21,6 @@ private:
 	Texture2D * Normal;
 	Texture2D * Spec;
 	glm::vec4 Color;
+
 };
 

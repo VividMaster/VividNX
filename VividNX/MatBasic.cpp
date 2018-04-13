@@ -8,6 +8,7 @@ MatBasic::MatBasic()
 	Normal = nullptr;
 	Spec = nullptr;
 	Color = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+	SetFX(new FXMP());
 
 }
 

@@ -30,11 +30,29 @@ void SceneRenderer::Sync()
 
 void SceneRenderer::RenderScene() {
 
+	Bind();
 	RenderNode(Graph->GetRoot());
+	Release();
 
 }
 
 void SceneRenderer::RenderNode(SceneNode * node) {
 
+
+}
+
+void SceneRenderer::Bind() {
+
+}
+void SceneRenderer::Release() {
+
+
+}
+
+void SceneRenderer::BindNode(SceneNode * node) {
+
+}
+
+void SceneRenderer::ReleaseNode(SceneNode * node) {
 
 }

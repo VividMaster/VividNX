@@ -12,5 +12,7 @@ public:
 	~RendererSimple();
 	void Sync() override;
 	void RenderNode(SceneNode * node) override;
+	void BindNode(SceneNode * node) override;
+	void ReleaseNode(SceneNode * node) override;
 };
 
