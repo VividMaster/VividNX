@@ -134,9 +134,21 @@ App::App()
 	Global::MY = ay;
 	glfwSetKeyCallback(Win, key_callback);
 
+	double nextFps = 0;
+	int frames = 0;
+	int fpsc = 0;
 
 	while (!glfwWindowShouldClose(Win)) {
 
+		double ct = glfwGetTime();
+		if (ct > nextFps) {
+
+			nextFps = ct + 1.0f;
+			fpsc = frames;
+			frames = 0;
+			cout << "FPS:" << fpsc << endl;
+		}
+		frames++;
 		glfwMakeContextCurrent(Win);
 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

@@ -1,8 +1,5 @@
-﻿  Import.cpp
-c:\work\dev\nx\git\vividnx\vividnx\import.cpp(38): warning C4018: '<': signed/unsigned mismatch
-c:\work\dev\nx\git\vividnx\vividnx\import.cpp(48): warning C4018: '<': signed/unsigned mismatch
-c:\work\dev\nx\git\vividnx\vividnx\import.cpp(84): warning C4018: '<': signed/unsigned mismatch
-c:\work\dev\nx\git\vividnx\vividnx\import.cpp(122): warning C4018: '<': signed/unsigned mismatch
+﻿  SceneNode.cpp
+c:\work\dev\nx\git\vividnx\vividnx\scenenode.cpp(49): warning C4018: '<': signed/unsigned mismatch
 assimp-vc140-mt.lib(assimp-vc140-mt.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 assimp-vc140-mt.lib(assimp-vc140-mt.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
 DevIL.lib(DevIL.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored

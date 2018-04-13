@@ -132,7 +132,7 @@ void SceneNode::Move(float x, float y, float z) {
 	glm::vec4 perp;
 
 	glm::decompose(mr, rs, rr, trans, skew, perp);
-	cout << "VX:" << trans.x << " VY:" << trans.y << " Z:" << trans.z << endl;
+//	cout << "VX:" << trans.x << " VY:" << trans.y << " Z:" << trans.z << endl;
 	Position.x = Position.x + trans.x;
 	Position.y = Position.y + trans.y;
 	Position.z = Position.z + trans.z;
